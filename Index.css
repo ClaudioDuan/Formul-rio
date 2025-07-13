@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+}
+
+form {
+    max-width: 400px;
+    width: 100%;
+    margin: 40px auto;
+    background: #fff;
+    padding: 24px 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+
+.submit, .reset {
+    width: 48%;
+    margin-right: 2%;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    position: relative;
+}
+
+.reset {
+    background: #888;
+    margin-right: 0;
+}
+
+.submit:hover {
+    background: #125ea2;
+}
+
+.reset:hover {
+    background: #555;
+}
+
+.submti:hover::after,
+.reset:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    pointer-events: none;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #1976d2;
+    margin-top: 24px;
+}
+
+.nome::before {
+    content: "👤 ";
+    font-size: 1.1em;
+    vertical-align: middle;
+}
+
+.senha::before {
+    content: "🔒 ";
+    font-size: 1.1em;
+    vertical-align: middle;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    form {
+        max-width: 90%;
+        width: 90%;
+        padding: 16px 8px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    form {
+        max-width: 100%;
+        width: 100%;
+        padding: 10px 2px;
+        margin: 10px 0;
+    }
+    input, select, textarea {
+        font-size: 0.95rem;
+        padding: 6px;
+    }
+    .submit, .reset {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
